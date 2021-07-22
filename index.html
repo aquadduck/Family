@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Family </title>
+    </head>
+    <body>
+        <h3> My Family </h3>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.nZv_JwElowrbOqg1QxBtCwHaKZ&pid=Api" style="width:  40%;" style="height: 50%" id="family">
+        <h1 id="family_name"></h1>
+        <button onclick="update()">Next Family Member</button>
+    </body>
+    <script>
+        var images = ["https://tse1.mm.bing.net/th?id=OIP.nZv_JwElowrbOqg1QxBtCwHaKZ&pid=Api","https://tse4.mm.bing.net/th?id=OIP.u10LgD6jNihl_IrFarTmDAHaJ9&pid=Api","https://tse1.mm.bing.net/th?id=OIP.uiEmnw9mMx5HtCK2YhvHwwAAAA&pid=Api","https://tse1.mm.bing.net/th?id=OIP.dA8Gt4l9jQPDLfh00z0V_gHaHa&pid=Api","https://tse1.mm.bing.net/th?id=OIP.vcVtS5UHdMCiYXdLXqPYywHaE8&pid=Api","https://tse3.mm.bing.net/th?id=OIP.mUzK7yLbOW1NBdVp7DWiBwHaHa&pid=Api"];
+
+        var names = ["Azneil","Alia","Lyana/Ayesha","Lyana/Adia","Ahmed/Aqeil","Ahmed/Ayser"];
+
+        var i = 0;
+        function update()
+        {
+            i++;
+            var number_of_family_in_array = 5
+            if(i > number_of_family_in_array)
+            {
+                i = 0;
+            }
+            var updateImages = images[i];
+            var updateName = names[i];
+            document.getElementById("family").src = updateImages;
+            document.getElementById("family_name").innerHTML = updateName;
+        }
+</script>
+</html>
